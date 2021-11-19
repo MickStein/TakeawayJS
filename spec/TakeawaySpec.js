@@ -7,6 +7,6 @@ describe('Takeaway', () => {
   });
 
   it('should have a menu with prices', () => {
-    expect(takeaway.printMenu()).toEqual('curry: £10');
+    expect(takeaway.printMenu()).toEqual('curry: £10 pizza: £10 burger: £13');
   });
 });
