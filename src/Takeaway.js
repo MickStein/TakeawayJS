@@ -19,5 +19,16 @@ class Takeaway {
     if(item in menuList) {
       userBasket[item] = menuList[item];
     }
+    return userBasket;
+  };
+
+  total() {
+    const basketList = Object.entries(this.basket);
+    let totalCost = [];
+    for(const[name, price] of basketList) {
+        totalCost.push(price);
+    };
+
+    return totalCost.reduce((a, b) => a + b, 0);
   };
 };

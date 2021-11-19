@@ -12,9 +12,16 @@ describe('Takeaway', () => {
 
   it('should add selected items to basket', () => {
     takeaway.add('curry');
-    expect(takeaway.basket).toEqual(Object({ curry: 10}));
+    expect(takeaway.basket).toEqual({curry: 10});
 
     takeaway.add('burger');
     expect(takeaway.basket).toEqual({curry: 10, burger: 13});
+  });
+
+  it('should sum the total cost of the items in the basket', () => {
+    takeaway.add('curry')
+    takeaway.add('pizza')
+    takeaway.add('burger')
+    expect(takeaway.total()).toEqual(33);
   });
 });
