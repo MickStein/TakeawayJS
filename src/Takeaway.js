@@ -1,6 +1,9 @@
 class Takeaway {
+  constructor() {
+    this.menu = {curry: 10};
+  }
+
   printMenu() {
-    let menu = 'curry: £10'
-    return menu;
+    return `${Object.keys(this.menu)}: £${Object.values(this.menu)}`;
   };
 };
